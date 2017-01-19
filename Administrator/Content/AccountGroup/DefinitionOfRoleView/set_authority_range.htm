@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="ja-jp" xml:lang="ja-jp" data-mc-search-type="NGram" data-mc-help-system-file-name="Administrator.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="アカウントグループ|役割の定義ビュー">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <meta http-equiv="Content-Language" content="ja-JP" /><title>権限の適用範囲を定義する</title>
+        <link rel="StyleSheet" href="..\..\TimeSheet.css" type="text/css" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Administrator.htm#AccountGroup/DefinitionOfRoleView/set_authority_range.htm">目次を表示</a>
+        </p>
+        <h1><a name="kanchor13"></a>権限の適用範囲を定義する</h1>
+        <p>TimeTracker FXで操作を可能にする権限の範囲を、役職毎に制限したい場合があります。</p>
+        <p>以下の[組織体系]・[役職と権限を適用する範囲]を例に、[組織の定義]と[役割の定義]それぞれの設定について説明します。</p>
+        <p>&#160;</p>
+        <p class="title">組織体系</p>
+        <table style="left: 0px;top: 902px;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col />
+            <col />
+            <col />
+            <tr valign="top">
+                <td style="border: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle" bgcolor="#C0C0C0">
+                    <p style="font-weight: normal;" align="center">事業部署</p>
+                </td>
+                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle" bgcolor="#C0C0C0">
+                    <p style="font-weight: normal;" align="center">部</p>
+                </td>
+                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle" bgcolor="#C0C0C0">
+                    <p style="font-weight: normal;" align="center">課</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td rowspan="7" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>XX事業部</p>
+                </td>
+                <td rowspan="2" style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>営業部</p>
+                </td>
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>営業1課</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>営業2課</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td rowspan="2" style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>開発部</p>
+                </td>
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>開発1課</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>開発2課</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>購買部</p>
+                </td>
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>購買課</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td rowspan="2" style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>人事部</p>
+                </td>
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>人事課</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>総務・庶務課</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td rowspan="2" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>統括本部</p>
+                </td>
+                <td rowspan="2" style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>経営統括部</p>
+                </td>
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>統括</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>秘書課</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p class="title">役職と権限を適用する範囲</p>
+        <table style="left: 0px;top: 902px;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col />
+            <col />
+            <tr valign="top">
+                <td style="border: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle" bgcolor="#C0C0C0">
+                    <p style="font-weight: normal;" align="center">役職</p>
+                </td>
+                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle" bgcolor="#C0C0C0">
+                    <p style="font-weight: normal;" align="center">対象とする範囲</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>事業部長</p>
+                </td>
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p style="font-weight: normal;">自身が所属する事業部</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>部長</p>
+                </td>
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>自身が所属する部</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>課長・プロジェクトマネージャー</p>
+                </td>
+                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                    <p>自身が所属する課</p>
+                </td>
+            </tr>
+        </table>
+        <p>&#160;</p>
+        <p class="title">[組織の定義]の設定内容</p>
+        <ol>
+            <li value="1">
+                <p>組織が3階層なので、最小の組織単位の「課」を[組織名]で定義します。</p>
+            </li>
+            <li value="2">
+                <p>上位2階層を定義するために、[次の組織レベルまで利用する]で[組織Lv2]を設定します。</p>
+            </li>
+            <li value="3">
+                <p>[組織Lv1]に「事業部」、[組織Lv2]に「部」を定義します。<br />	対応する[項目名]と[設定内容]は、以下の通りです。</p>
+                <table style="left: 0px;top: 902px;margin-left: 0;margin-right: auto;" cellspacing="0">
+                    <col />
+                    <col />
+                    <tr valign="top">
+                        <td style="border: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle" bgcolor="#C0C0C0">
+                            <p style="font-weight: normal;" align="center">項目名</p>
+                        </td>
+                        <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle" bgcolor="#C0C0C0">
+                            <p style="font-weight: normal;" align="center">設定内容</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>組織Lv1</p>
+                        </td>
+                        <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p style="font-weight: normal;">事業部</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>組織Lv2</p>
+                        </td>
+                        <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>部</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>組織名</p>
+                        </td>
+                        <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>課</p>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+            <ul>
+                <li class="p-情報" value="1">
+                    <p>実際に組織を設定した画面は<a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t2"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />こちら</a>をご覧ください。</p>
+                    <div style="display: none;" data-mc-target-name="t2">
+                        <p>
+                            <img src="../../Image/section_example.png" alt="" style="border: none;" width="417" height="219" border="0" />
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </ol>
+        <p>&#160;</p>
+        <p class="title">[役割の定義]の設定内容</p>
+        <ol>
+            <li value="1">
+                <p>役割に[事業部長]・[部長]・[課長]・[プロジェクトマネージャー]それぞれの役職名と権限を設定します。</p>
+            </li>
+            <li value="2">
+                <p>各役割の[権限範囲]欄に、適用する範囲に該当する項目を設定します。<br />	役職と[権限範囲]欄に設定する項目の対応は以下の通りです。</p>
+                <table style="left: 0px;top: 902px;margin-left: 0;margin-right: auto;" cellspacing="0">
+                    <col />
+                    <col />
+                    <tr valign="top">
+                        <td style="border: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle" bgcolor="#C0C0C0">
+                            <p style="font-weight: normal;" align="center">役職</p>
+                        </td>
+                        <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle" bgcolor="#C0C0C0">
+                            <p style="font-weight: normal;" align="center">[権限範囲]欄で選択する項目</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>事業部長</p>
+                        </td>
+                        <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p style="font-weight: normal;">[組織Lv1]</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>部長</p>
+                        </td>
+                        <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>[組織Lv2]</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>課長</p>
+                        </td>
+                        <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>[組織]</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>プロジェクトマネージャー</p>
+                        </td>
+                        <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" valign="middle">
+                            <p>[組織]</p>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+            <ul>
+                <li class="p-情報" value="1">
+                    <p>実際に役割を設定した画面は<a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t1"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />こちら</a>をご覧ください。</p>
+                    <div style="display: none;" data-mc-target-name="t1">
+                        <p>
+                            <img src="../../Image/role_example.png" alt="" style="border: none;" width="500" height="172" border="0" />
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

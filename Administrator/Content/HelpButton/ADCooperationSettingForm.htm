@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="ja-jp" xml:lang="ja-jp" data-mc-search-type="NGram" data-mc-help-system-file-name="Administrator.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="システム設定グループ|システムの動作ビュー|システムの動作を設定する">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <meta http-equiv="Content-Language" content="ja-JP" /><title>Active Directory連携を設定する</title>
+        <link rel="StyleSheet" href="..\TimeSheet.css" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Administrator.htm#HelpButton/ADCooperationSettingForm.htm">目次を表示</a>
+        </p>
+        <h1><a name="kanchor43"></a>Active Directory連携を設定する</h1>
+        <p>Active Directory連携の有効・無効、Active Directoryへの接続情報を設定する方法について説明します。</p>
+        <p>&#160;</p>
+        <p class="title">構成</p>
+        <p>Active Directory連携の設定ダイアログは、次の内容で構成されています。</p>
+        <p>
+            <img src="../Image/ad_setting_dialog.png" alt="" style="border: none;" width="316" height="372" border="0" />
+        </p>
+        <p>&#160;</p>
+        <ul type="disc">
+            <li value="1">
+                <p><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t5"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Active Directory連携を行う</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="t5">
+                    <p>Active Directory連携の有効・無効を設定します。</p>
+                </div>
+            </li>
+            <li value="2">
+                <p><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t4"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />LDAPパス</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="t4">
+                    <p>TimeTracker FXと連携するActive Directoryに接続するためのLDAPパスを入力します。</p>
+                    <p>TimeTracker FXと連携させたいユーザが所属する組織(OU)のLDAPパスを指定してください。</p>
+                    <p>Active Directory連携が可能な範囲は指定した組織(OU)以下に所属するユーザとなります。</p>
+                    <p>複数の組織のユーザをTimeTracker FXと連携させる場合は、各組織が含まれる共通の上位組織(OU)を指定してください。</p>
+                    <ul>
+                        <li class="p-情報" value="1">
+                            <p>設定するLDAPパスの具体的な内容につきましては、貴社のActive 
+			 Directory管理者様へご確認ください。</p>
+                        </li>
+                    </ul>
+                    <p>
+                        <img src="../Image/ad_set_ldap_path.png" alt="" style="border-left-style: Solid;border-left-width: 1px;border-right-style: Solid;border-right-width: 1px;border-top-style: Solid;border-top-width: 1px;border-bottom-style: Solid;border-bottom-width: 1px;" width="321" height="220" border="1" />
+                    </p>
+                </div>
+            </li>
+            <li value="3">
+                <p><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t3"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />現在のLDAPパスを取得</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="t3">
+                    <p>[現在のLDAPパスを取得]をクリックすると、現在Windowsにログインしているユーザが所属するActive Directoryの組織(OU)のLDAPパスを取得します。</p>
+                    <p>LDAPパスの設定の際にご活用ください。</p>
+                    <p>
+                        <img src="../Image/ad_get_ldap_path.png" alt="" style="border-left-style: Solid;border-left-width: 1px;border-right-style: Solid;border-right-width: 1px;border-top-style: Solid;border-top-width: 1px;border-bottom-style: Solid;border-bottom-width: 1px;" width="485" height="390" border="1" />
+                    </p>
+                </div>
+            </li>
+            <li value="4">
+                <p><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t2"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />ログイン名</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="t2">
+                    <p>[LDAPパス]で指定する組織(OU)へ接続可能なActive Directoryのアカウントのログイン名を入力します。</p>
+                </div>
+            </li>
+            <li value="5">
+                <p><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t1"><img class="MCToggler_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />パスワード</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="t1">
+                    <p>[ログイン名]で指定したActive Directoryのアカウントのパスワードを入力します。</p>
+                </div>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="ja-jp" xml:lang="ja-jp" data-mc-search-type="NGram" data-mc-help-system-file-name="Administrator.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="ロググループ|操作ログビュー">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <meta http-equiv="Content-Language" content="ja-JP" /><title>操作ログのファイル出力設定を行う</title>
+        <link rel="StyleSheet" href="..\..\TimeSheet.css" type="text/css" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Administrator.htm#SystemSettingGroup/ServerTaskView/OutputConfiguration.htm">目次を表示</a>
+        </p>
+        <h1><a name="kanchor37"></a>操作ログのファイル出力設定を行う</h1>
+        <p>操作ログを外部ファイルへ出力する際の設定方法について説明します。</p>
+        <p>&#160;</p>
+        <p class="title">運用準備</p>
+        <p>操作ログを外部出力するには、[サーバタスクの設定]ビューでサーバタスク[操作ログのファイル出力]を有効に設定します。</p>
+        <p>&#160;</p>
+        <p class="title">操作ログの外部出力設定を行うには</p>
+        <p>操作ログの外部出力に関する各種設定は、以下のXMLファイルにて管理されています。</p>
+        <p>設定を変更するには、メモ帳などでファイルを直接開いて編集してください。</p>
+        <p>&#160;</p>
+        <ul>
+            <li class="箇条書き" value="1">　(TimeTracker FXインストールフォルダ)￥OperationLogServerTask.xml</li>
+        </ul>
+        <p>&#160;</p>
+        <ul>
+            <li class="p-警告" value="1">
+                <p>設定可能なパラメータ要素、および設定値には制限があります。</p>
+            </li>
+        </ul>
+        <p>設定可能なパラメータ要素を追加したり、設定値を変更した場合には動作保証対象外となります。</p>
+        <p>&#160;</p>
+        <ul>
+            <li class="箇条書き" value="1">
+                <p><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t3"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />操作ログの出力方法に関する設定</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="t3">
+                    <div align="left">
+                        <table style="left: 0px;top: 273px;" cellspacing="0" width="100%">
+                            <col style="width: 15%;" />
+                            <col style="width: 12.5%;" />
+                            <col style="width: 12.5%;" />
+                            <col style="width: 40%;" />
+                            <col style="width: 20%;" />
+                            <tr style="height: 23px;">
+                                <td style="border: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p>設定項目</p>
+                                </td>
+                                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p style="font-weight: normal;">パラメータ要素名</p>
+                                </td>
+                                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p style="font-weight: normal;">初期値</p>
+                                </td>
+                                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p>設定値</p>
+                                </td>
+                                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p>備考</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 197px;">
+                                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ディレクトリとファイル名</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>filePath</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>OperationLogs/{config_folder_name}/</p>
+                                    <p>OperationLogServerTask.log</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin" type="circle">
+                                        <li class="箇条書き" value="1">
+                                            <p>ディレクトリ名：絶対パス、または相対パスで指定します。</p>
+                                        </li>
+                                        <ul>
+                                            <li type="circle" value="1">
+                                                <p>絶対パス指定･･･指定されたパスのフォルダへ出力します。</p>
+                                            </li>
+                                            <li type="circle" value="2">
+                                                <p>相対パス指定･･･インストールフォルダを基準として指定された相対パスのフォルダへ出力します。</p>
+                                            </li>
+                                            <li type="circle" value="3">
+                                                <p>指定なし・・・インストールフォルダへ出力します。</p>
+                                            </li>
+                                            <li class="p-情報" value="4">
+                                                <p>パス内に{config_folder_name}を指定した場合、{config_folder_name}をサーバタスクが参照するサーバ設定ファイルが格納されているフォルダ名に置き換えます。</p>
+                                            </li>
+                                        </ul>
+                                        <p>サーバタスクが参照するサーバ設定ファイルの格納フォルダについては、<a href="../../UseAdministrator/servertask_attention.htm#servertask_config">こちら</a>をご参照ください。</p>
+                                    </ul>
+                                    <ul class="nonmargin" type="circle">
+                                        <li class="箇条書き" value="1">
+                                            <p>ファイル名：必須</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin" type="disc">
+                                        <li class="箇条書き" value="1">
+                                            <p>絶対パスとは・・・ファイルを格納するパス(場所)を最初から最後まで記述します。</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>相対パスとは・・・基準となる場所から見て相対的なファイルの場所を記述します。</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 44px;">
+                                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ファイル名の編集方法</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>staticLogFileName</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：&lt;filePath&gt;要素にて指定されたファイル名です。</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：&lt;filePath&gt;要素にて指定されたファイル名の後に数字を追加します。</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>&#160;</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 82px;">
+                                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>文字コード</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>encoding</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>Shift_JIS</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>以下の文字コードが指定できます。</p>
+                                    <ul>
+                                        <li class="箇条書き" value="1">
+                                            <p>Shift_JIS</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>EUC-JP </p>
+                                        </li>
+                                        <li class="箇条書き" value="3">
+                                            <p>UTF-8 </p>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">&#160;</td>
+                            </tr>
+                            <tr style="height: 44px;">
+                                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>書き込み方法</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>appendToFile</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：追加</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：上書き</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">&#160;</td>
+                            </tr>
+                            <tr style="height: 102px;">
+                                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>最大サイズ</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>maximumFileSize</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>10MB</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>最大サイズと単位を指定します。</p>
+                                    <p>※以下の単位が指定できます。</p>
+                                    <ul>
+                                        <li class="箇条書き" value="1">
+                                            <p>KB</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>MB</p>
+                                        </li>
+                                        <li class="箇条書き" value="3">
+                                            <p>GB</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>最大サイズを超えるとログローテーションを行います。</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 63px;">
+                                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ファイル数の上限</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>maxSizeRollBackups</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>0</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>0未満：バックアップファイルは削除しません。</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>0：ログファイルの最大サイズ&lt;maximumFileSize&gt;になった時点で上書きします。</p>
+                                        </li>
+                                        <li class="箇条書き" value="3">
+                                            <p>1以上：バックアップファイル数。</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ログローテーションにより保持するファイル数の上限を指定します。</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 118px;">
+                                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ログローテーションの種類</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>countDirection</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>-1</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ログファイルの名前に付与する数値の順番を指定します。</p>
+                                    <ul>
+                                        <li class="箇条書き" value="1">
+                                            <p>-1より大きい値：ログファイルの作成時期が古い順に番号をつけます。</p>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li class="箇条書き" value="1">
+                                            <p>-1：ログファイルの作成時期が新しい順に番号をつけます。</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>要素の組み合わせにより、ログファイルを以下のような運用で管理できます。</p>
+                                    <ul type="disc">
+                                        <li class="箇条書き" value="1">
+                                            <p>ログファイルを自動的には消さず、ログファイルの作成時期が古い順に番号を振って管理する。</p>
+                                        </li>
+                                        <li class="箇条書き" type="circle" value="2">
+                                            <p>&lt;maxSizeRollBackups&gt;要素を「0」未満に指定</p>
+                                        </li>
+                                        <li class="箇条書き" type="circle" value="3">
+                                            <p>&lt;staticLogFileName&gt;要素を「false」に指定</p>
+                                        </li>
+                                        <li class="箇条書き" type="circle" value="4">
+                                            <p>&lt;countDirection&gt;要素を「-1」より大きい値に指定</p>
+                                        </li>
+                                        <li class="箇条書き" value="5">
+                                            <p>ログファイルを自動的には消さず、ログファイルの作成時期が新しい順に番号を振って管理する。</p>
+                                        </li>
+                                    </ul>
+                                    <ul type="disc">
+                                        <li class="箇条書き" type="circle" value="1">
+                                            <p>&lt;maxSizeRollBackups&gt;要素を「0」未満に指定</p>
+                                        </li>
+                                        <li class="箇条書き" type="circle" value="2">
+                                            <p>&lt;staticLogFileName&gt;要素を「true」に指定</p>
+                                        </li>
+                                        <li class="箇条書き" type="circle" value="3">
+                                            <p>&lt;countDirection&gt;要素を「-1」に指定</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <ul>
+                        <li class="p-情報" value="1">
+                            <p>ログローテーションとはログファイルの肥大化を防ぐための仕組みです。<br />指定された最大サイズを超えるとログファイルのバックアップを取り、新しいログファイルを作成します。<br />バックアップファイルは指定されたログファイル数の中でローテーションされます。</p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="箇条書き" value="2">
+                <p><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t2"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />操作ログの出力形式に関する設定</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="t2">
+                    <div align="left">
+                        <table style="left: 0px;top: 273px;height: 100px;" cellspacing="0" width="100%">
+                            <col style="width: 20%;" />
+                            <col style="width: 18%;" />
+                            <col style="width: 18%;" />
+                            <col style="width: 44%;" />
+                            <tr>
+                                <td style="border: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p>設定項目</p>
+                                </td>
+                                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p style="font-weight: normal;">パラメータ要素名</p>
+                                </td>
+                                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p style="font-weight: normal;">初期値</p>
+                                </td>
+                                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p>設定値</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ログファイルの出力形式</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>format</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>CSV</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>CSV：CSV形式</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>TSV：TSV形式</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>&#160;</p>
+                </div>
+            </li>
+            <li class="箇条書き" value="3">
+                <p><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t1"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />操作ログの出力フィールドに関する設定</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="t1">
+                    <div align="left">
+                        <table style="left: 0px;top: 273px;height: 100px;" cellspacing="0" width="100%">
+                            <col style="width: 20%;" />
+                            <col style="width: 18%;" />
+                            <col style="width: 18%;" />
+                            <col style="width: 44%;" />
+                            <tr>
+                                <td style="border: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p style="font-weight: normal;">出力フィールド</p>
+                                </td>
+                                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p style="font-weight: normal;">パラメータ要素名</p>
+                                </td>
+                                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p style="font-weight: normal;">初期値</p>
+                                </td>
+                                <td style="border-top: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;" bgcolor="#C0C0C0">
+                                    <p>設定値</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>登録日時</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>OperationDateTime</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：登録日時を出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：登録日時を出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>1</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>登録日時の出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>アカウントコード</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>AccountCode</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：アカウントコードを出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：アカウントコードを出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>2</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>アカウントコードの出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>アカウント名</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>AccountName</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：アカウント名を出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：アカウント名を出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>3</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>アカウント名の出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>組織名</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>SectionName</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：組織名を出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：組織名を出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>4</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>組織名の出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>機能名</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>FunctionName</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：機能名を出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：機能名を出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>5</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>機能名の出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ログコード</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>OperationCode</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：ログコードを出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：ログコードを出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>6</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ログコードの出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ログ名</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>OperationName</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：ログ名を出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：ログ名を出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>7</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ログ名の出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>内容</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>Content</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：内容を出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：内容を出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>8</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>内容の出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>詳細</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>Detail</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：詳細を出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：詳細を出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>9</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>詳細の出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ログパラメータ</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>Parameters</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：ログパラメータを出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：ログパラメータを出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>10</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>ログパラメータの出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>処理時間</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>TimeProcessing</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：処理時間を出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：処理時間を出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>11</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>処理時間の出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>Windowsユーザ名</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>WindowsUser</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：Windowsユーザ名を出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：Windowsユーザ名を出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>12</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>Windowsユーザ名の出力列順</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td rowspan="3" style="border-left: Solid 1px #808080;border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>マシン名</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>name</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>PCName</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>変更不可</p>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>output</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>true</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <ul class="nonmargin">
+                                        <li class="箇条書き" value="1">
+                                            <p>true：マシン名を出力する</p>
+                                        </li>
+                                        <li class="箇条書き" value="2">
+                                            <p>false：マシン名を出力しない</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="height: 15pt;">
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>order</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>13</p>
+                                </td>
+                                <td style="border-right: Solid 1px #808080;border-bottom: Solid 1px #808080;padding-right: 10px;padding-left: 10px;">
+                                    <p>マシン名の出力列順</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>&#160;</p>
+                </div>
+            </li>
+        </ul>
+    </body>
+</html>

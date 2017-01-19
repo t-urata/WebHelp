@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="ja-jp" xml:lang="ja-jp" data-mc-search-type="NGram" data-mc-help-system-file-name="Administrator.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="システム設定グループ|システムの動作ビュー" data-mc-file-tags="RoboHelpStatus.完了" data-mc-priority="0" data-mc-time-estimate="0" data-mc-id="オートメーションの自動ログイン">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>システムの動作を設定する</title>
+        <link rel="StyleSheet" href="../../TimeSheet.css" type="text/css" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Administrator.htm#SystemSettingGroup/SystemView/edit_operation_system.htm">目次を表示</a>
+        </p>
+        <h1><a name="kanchor42"></a>システムの動作を設定する</h1>
+        <p>システムの動作の設定方法について説明します。</p>
+        <p>&#160;</p>
+        <p class="title"><a name="active_directory"></a>[Active Directory連携]の設定について</p>
+        <p>TimeTracker FXとActive Directoryでパスワードを一元化し、Windowsのログオンパスワードを使用してTimeTracker 
+ FXにログインできるようにします。</p>
+        <p>TimeTracker FXでパスワードを管理する手間がなくなり、Windowsのログオンパスワードと同様にActive Directoryで定義したセキュリティルールで運用できます。</p>
+        <p>画面上に現在の設定情報が表示されるので[設定]ボタンをクリックし、表示される<a href="../../HelpButton/ADCooperationSettingForm.htm">[Active 
+ Directory連携の設定]ダイアログ</a>で[Active Directory連携]機能の設定をします。</p>
+        <p>&#160;</p>
+        <p class="title"><a name="password"></a>[パスワード保存の設定]について</p>
+        <p>[パスワード保存の設定]では、この機能でログイン名のみ保存し、パスワードを保存しないように設定できます。</p>
+        <p>ログイン時に毎回パスワード入力を必須とする場合は、[パスワードを保存する]のチェックを解除します。</p>
+        <ul>
+            <li class="p-情報" value="1">
+                <p>設定変更後の最初の起動時には記録されたパスワードが表示され、その次以降の起動から記録されたパスワードが削除されます。</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p class="title"><a name="code" id="code"></a>[プロジェクトコードとタスクコードの入力]の設定について</p>
+        <p>プロジェクトコード・タスクコードを必ず入れるように運用する場合など、同一コードを入力できないように設定できます。</p>
+        <p>設定できる内容は、2種類です。</p>
+        <ul type="disc">
+            <li value="1">
+                <p><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t2"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />[プロジェクトコードがユニークになるようにシステムがチェックする]</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="t2">
+                    <p>チェックを入れると、プロジェクトコードがすべてのプロジェクトで重複しないように、システムがチェックします。</p>
+                </div>
+            </li>
+            <li value="2">
+                <p><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_" data-mc-targets="t1"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />[タスクコードがユニークになるようにシステムがチェックする]</a>
+                </p>
+                <div style="display: none;" data-mc-target-name="t1">
+                    <p>チェックを入れると、タスクコードが同一のプロジェクト内で重複しないようにシステムがチェックします。</p>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li class="p-警告" value="1">
+                <p>チェックが入っている場合、プロジェクトコードやタスクコードが空の状態でプロジェクトを管理できません。</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p class="title"><a name="automation" id="automation"></a>[オートメーションの自動ログイン]の設定について</p>
+        <p>オートメーションでの自動ログインの有効・無効化ができます。</p>
+        <ul>
+            <li value="1">
+                <p>[オートメーションで自動ログインを許可する]にチェックを入れると、オートメーションでの自動ログインを有効にします。</p>
+            </li>
+            <li class="p-情報" value="2">
+                <p>開発者向けの機能です。詳しくは、オートメーションヘルプをご覧ください。</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p class="title"><a name="standard_cost" id="standard_cost"></a>[標準コスト単価]の設定について</p>
+        <p>割り当てが存在しないノードのコスト単価を、テキストボックスに入力します。</p>
+        <ul type="1">
+            <li class="p-警告" value="1">
+                <p>入力できる値は、0以上の整数です。それ以外の数値を誤って入力していた場合、 
+	 エラーダイアログが開きます。</p>
+            </li>
+            <li class="p-警告" value="2">
+                <p>値が空文字の場合、エラーダイアログが開きます。</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p class="title">割り当てが存在しないノードのコスト単価(標準コスト単価)とは</p>
+        <p>1時間あたりの標準的なコスト単価のことです。具体的には、次の場合に使用します。</p>
+        <ul type="disc">
+            <li value="1">
+                <p><a href="../../HelpButton/AccountView.htm">アカウントの編集ビュー</a>で、アカウントごとのコスト単価の標準値として利用できます。</p>
+            </li>
+            <li value="2">
+                <p>プランナーで、プロジェクトの標準コスト単価の初期値(システム定義)として利用できます。</p>
+            </li>
+        </ul>
+        <ul type="disc">
+            <li class="p-警告" value="1">
+                <p>Administratorで、標準コスト単価を変更しても、プロジェクトごとの標準コスト単価は変更されません。</p>
+            </li>
+        </ul>
+        <ul type="disc">
+            <li class="p-情報" value="1">
+                <p>通常、アカウントごとにコストの単価を設定しますが、プランナーでアカウントの割り当てをしていないノードについては、標準コスト単価を用いてコスト計算を行います。</p>
+            </li>
+            <p>この標準コスト単価は、プランナーでプロジェクトごとに設定できますので、実際のコスト計算にはプロジェクトごとの標準コスト単価を使用します。</p>
+            <p>Administratorでは、この標準コスト単価の初期値を設定するだけです。詳しくは、TimeTracker 
+			FXヘルプの[コストを管理する]をご覧ください。</p>
+        </ul>
+        <p>&#160;</p>
+        <p class="title"><a name="money_unit" id="money_unit"></a>[通貨設定]の設定について</p>
+        <p>本システムで管理するコストの通貨単位を設定できます。</p>
+        <p>設定できる通貨単位は円(￥)とドル(＄)です。</p>
+        <ul type="disc">
+            <li class="p-情報" value="1">
+                <p>Administratorで設定した通貨単位は、プロジェクトのコスト情報など、システム全体に反映されます。</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p class="title"><a name="transition" id="a3"></a>[工数入力定着基準の設定]について</p>
+        <p>[工数入力定着率]を算出するため、工数の入力が何日以内であれば、入力が定着されたとみなす日数(期間)を指定します。</p>
+        <p>設定できる期間は、「都度」「当日」「1日後」「2日後」・・・「15日後」となります。</p>
+        <p>デフォルトの設定は「当日」となります。</p>
+        <ul type="disc">
+            <li class="p-情報" value="1">
+                <p>算出された[工数入力定着率]は、[工数入力マルチモニタ]にて確認することができます。</p>
+            </li>
+        </ul>
+        <ul>
+            <li class="p-情報" value="1">
+                <p>[工数入力定着率]について、詳しくはTimeTracker 
+	 FXヘルプの[工数入力定着率]をご覧ください。</p>
+            </li>
+        </ul>
+        <ul type="disc">
+            <li class="p-警告" value="1">
+                <p>[工数入力マルチモニタ]を利用するためには、Administratorの[役割]にて[定着モニタ]権限の付与が必要となります。</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p class="title"><a name="log" id="a4"></a>[操作ログの設定]について</p>
+        <p>操作ログの記録の有無とログ対象とする操作を設定できます。</p>
+        <ul>
+            <li class="箇条書き" value="1">[操作ログを記録する]にチェックを入れると、[ログ対象の設定]ボタンが有効になります。<br />ログ対象の設定]ボタンをクリックし、<a href="../../HelpButton/SelectLogForm.htm">[ログ対象の設定]ダイアログ</a>でログを記録する操作を指定します。</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

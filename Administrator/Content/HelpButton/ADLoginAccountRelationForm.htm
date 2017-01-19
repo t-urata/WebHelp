@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="ja-jp" xml:lang="ja-jp" data-mc-search-type="NGram" data-mc-help-system-file-name="Administrator.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <meta http-equiv="Content-Language" content="ja-JP" /><title>ADログイン名を設定する</title>
+        <link rel="StyleSheet" href="..\TimeSheet.css" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Administrator.htm#HelpButton/ADLoginAccountRelationForm.htm">目次を表示</a>
+        </p>
+        <h1><a name="kanchor54"></a>ADログイン名を設定する</h1>
+        <p>TimeTracker FXのログイン名に対応するActive Directoryのログイン名を設定します。</p>
+        <p>Active Directory連携が有効な場合、ここで設定したActive Directoryのログイン名のパスワードがTimeTracker 
+ FXにログインする際のパスワードになります。</p>
+        <p>&#160;</p>
+        <p class="title">選択したアカウントのADログイン名を取得するには</p>
+        <ol>
+            <li value="1">
+                <p>設定するアカウントの行を選択します。</p>
+            </li>
+            <li value="2">
+                <p>[選択アカウントの設定]ボタンをクリックして表示する[ADログイン名を設定]を選択すると、[ADログイン名を設定]ダイアログが開きます。</p>
+            </li>
+            <ul>
+                <li class="p-警告" value="1">
+                    <p>アカウントを選択していない場合、エラーダイアログが開きます。</p>
+                </li>
+            </ul>
+            <p>
+                <img src="../Image/ad_name_setting_dialog.png" alt="" style="border: none;" width="416" height="159" border="0" />
+            </p>
+        </ol>
+        <ol start="3" style="list-style-type: decimal;">
+            <li value="3">
+                <p>[ドメイン]のリストボックスから、Active Directoryのログイン名を検索するドメインを選択します。</p>
+            </li>
+            <li value="4">
+                <p>[OK]をクリックすると、選択したドメインに所属するActive Directoryのユーザから、TimeTracker 
+	 FXで選択したアカウントのログイン名と一致するログイン名を検索します。</p>
+            </li>
+            <li value="5">
+                <p>検索した結果、最初に見つかったログイン名をTimeTracker FXで選択したアカウントの[ADログイン名]に設定します。</p>
+            </li>
+            <ul>
+                <li class="p-警告" value="1">
+                    <p>一致するアカウントが存在しない場合は[ADログイン名]が空欄となりますので、[ADログイン名]に直接入力するか、選択したアカウントのログイン名をActive 
+	 Directoryのログイン名と一致する名前に変更して再度[ADログイン名を設定]を行ってください。</p>
+                </li>
+            </ul>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

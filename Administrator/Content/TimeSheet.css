@@ -1,0 +1,428 @@
+/*<meta />*/
+
+body
+{
+	/*-------------------------------------------------------------------
+		標準フォント指定
+		メイリオ優先。
+		メイリオが存在しない場合、英文フォントをArialにしたほうが読みやすいが、
+	   「新機能・改善点一覧」ページの「○」が小さくなってしまうため指定しない。
+		MS UI Gothicは詰まった印象となるためNG
+	--------------------------------------------------------------------*/
+	font-family: 'メイリオ', 'Meiryo', 'sans-serif';
+	/* font-family: "メイリオ", Arial, "ＭＳ Ｐゴシック", sans-serif; */
+	background-color: #ffffff;
+	color: #313031;
+	/* 上端・左端が表示領域いっぱいまで塗り潰されるように */
+	margin-top: 4px;
+	margin-left: 4px;
+	padding-top: 4px;
+	/* 左側が詰まった印象になるので１文字空ける */
+	/* 個別タグでスタイル変更するとレイアウト崩れが生じる可能性があるため全ページ一括指定 */
+	padding-left: 1.0em;
+	/* フッター */
+	/* 常に表示領域の下端に表示されていておかしいので指定しない
+	border-color: #487B9A;	/* 明るい青：製品サイトの上部、中くらいの濃さの部分と同じ色 */
+	/*
+	margin-left: -0.5em;
+	margin-bottom: 1ex;
+	padding-bottom: 1ex;
+    border-style:solid;
+    border-width: 0px;
+    border-bottom-width: 18px;
+	*/
+}
+
+/*------------------------------------------------
+ Standard利用制限なしページのタイトル
+
+ 背景を帯状に塗りつぶし。
+ フォントサイズ 14pt → 18pt
+ フォント色を少し明るく
+ ※グラデーションはブラウザ依存のため使用しない
+------------------------------------------------*/
+
+h1
+{
+	font-weight: bold;
+	font-size: 18pt;
+	color: #eee;
+	text-indent: 1em;
+	/* 背景色 */
+	background-color: #487B9A;
+	margin-top: -1ex;
+	margin-left: -1em;
+	margin-bottom: 1.5ex;
+	margin-right: 0em;
+	padding-top: 2ex;
+	padding-bottom: 2ex;
+}
+
+li.h1
+{
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+h2
+{
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+li.h2
+{
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+/*------------------------------------------------
+ 「Standard利用不可」つきのページタイトル
+
+ フォントサイズ、色は<H1>と同じ。
+ イメージは右下でなく、右端に変更。
+------------------------------------------------*/
+
+h3
+{
+	font-weight: bold;
+	font-size: 18pt;
+	color: #eee;
+	text-indent: 1em;
+	/* 背景色 */
+	background-color: #487B9A;
+	margin-top: -1ex;
+	margin-left: -1em;
+	margin-bottom: 1.5ex;
+	margin-right: 0em;
+	padding-top: 2ex;
+	padding-bottom: 2ex;
+	/* ここまで<H1>タグと同じ */
+	/* 「Standard利用不可」イメージ */
+	background-image: url("Image/not_for_standard.png");
+	background-repeat: No-Repeat;
+	background-position: Right;
+	background-attachment: scroll;
+}
+
+li.h3
+{
+	font-weight: bold;
+	font-size: 14.0pt;
+	line-height: 200%;
+}
+
+/*------------------------------------------------
+ 「Standard利用制限」つきのページタイトル
+
+ フォントサイズ、色は<H1>と同じ。
+ イメージは右下でなく、右端に変更。
+------------------------------------------------*/
+
+h4
+{
+	font-weight: bold;
+	font-size: 18pt;
+	color: #eee;
+	text-indent: 1em;
+	/* 背景色 */
+	background-color: #487B9A;
+	margin-top: -1ex;
+	margin-left: -1em;
+	margin-bottom: 1.5ex;
+	margin-right: 0em;
+	padding-top: 2ex;
+	padding-bottom: 2ex;
+	/* ここまで<H1>タグと同じ */
+	/* 「Standard利用制限」イメージ */
+	background-image: url("Image/limited_standard.png");
+	background-repeat: No-Repeat;
+	background-position: Right;
+	background-attachment: scroll;
+}
+
+li.h4
+{
+	font-weight: bold;
+	font-size: 14pt;
+	line-height: 200%;
+}
+
+h5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+li.h5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+h6
+{
+	font-weight: bold;
+	font-size: 9.0pt;
+}
+
+li.h6
+{
+	font-weight: bold;
+	font-size: 9.0pt;
+}
+
+p
+{
+	font-size: 10pt;
+	font-weight: normal;
+	margin-left: 0px;
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+	line-height: 150%;
+}
+
+li.p
+{
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+a.expandspot
+{
+	color: #008000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+
+span.expandtext
+{
+	font-style: italic;
+	font-weight: normal;
+	color: #ff0000;
+}
+
+a.dropspot
+{
+	cursor: hand;
+	font-weight: bold;
+	font-style: normal;
+	color: #0000ff;
+	text-decoration: none;
+}
+
+a.glossterm
+{
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+
+span.glosstext
+{
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+
+ol,
+ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+ul.nonmargin
+{
+    margin-left: 1em;
+    padding-left: 1em;   
+}
+
+/*------------------------------------------------
+ 節見出し
+
+ フォントサイズ 10pt → 12pt
+ フォント色を黒からグレーに変更。
+------------------------------------------------*/
+
+p.title
+{
+	font-weight: bold;
+	font-style: normal;
+	font-size: 12pt;
+	color: #313031;
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+	/* 先頭記号 */
+	border-style: solid;
+	border-width: 0px;
+	border-left-width: 6px;
+	border-color: #487B9A;
+	text-indent: 0.5em;
+	/* RoboHelpのエディタ用拡張と思われるためそのまま残す */
+	mc-next-tag: p;
+}
+
+li.P-title
+{
+	font-weight: bold;
+	font-style: normal;
+	color: #000000;
+	font-size: 10pt;
+}
+
+/*------------------------------------------------
+ 節見出し以外で、LI.Pにtitleクラスが指定されている場合があるため回避用のスタイル
+ 強制的に無指定のPタグと同じスタイルにする。
+------------------------------------------------*/
+
+li p.title
+{
+	/* ここまでの指定をリセット */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	line-height: 1;
+	/* 再指定：P */
+	font-size: 10pt;
+	font-weight: normal;
+	margin-left: 0px;
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+	line-height: 150%;
+	/* 再指定：LI.P */
+	/*
+	font-size: 10pt;
+	font-weight: normal;
+	*/
+	/* 再指定：LI.P-title */
+	/* font-style: normal; */
+	/* font-size: 10pt; */
+	font-weight: bold;
+	color: #000000;
+	/* タグのインデント分だけ左に戻す */
+	margin-left: -6px;
+}
+
+p.\0060C5\005831
+{
+	list-style: url("Image/information.gif");
+	mc-next-tag: p;
+}
+
+li.p-\0060C5\005831
+{
+	list-style: url("Image/information.gif");
+}
+
+p.\008B66\00544A
+{
+	list-style: url("Image/warning.gif");
+	mc-next-tag: p;
+}
+
+li.p-\008B66\00544A
+{
+	list-style: url("Image/warning.gif");
+}
+
+li.\00756A\0053F7\0030EA\0030B9\0030C8
+{
+	font-size: 10pt;
+	list-style: decimal;
+	margin-right: 20px;
+}
+
+rh-list.\00756A\0053F7\004ED8\00304D\0030EA\0030B9\0030C8
+{
+	x-lvl-1-format: "<x>&c";
+	x-lvl-2-type: lower-alpha;
+	x-lvl-2-format: "<x>&c";
+	x-lvl-2-margin: 20px;
+	x-lvl-3-type: lower-roman;
+	x-lvl-3-format: "<x>&c";
+	x-lvl-3-margin: 40px;
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "&o<x>&c";
+	x-lvl-4-margin: 60px;
+	x-lvl-5-format: "&o<x>&c";
+	x-lvl-5-margin: 80px;
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "&o<x>&c";
+	x-lvl-6-margin: 100px;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-lvl-7-format: "<x>.";
+	x-lvl-7-margin: 120px;
+	x-level-count: 9;
+	x-lvl-9-type: lower-roman;
+	x-lvl-9-margin: 160px;
+}
+
+li.\007B87\006761\0066F8\00304D
+{
+	font-size: 10pt;
+	list-style: disc;
+	margin-right: 20px;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:link
+{
+	color: #0086de;
+}
+
+a:hover
+{
+	color: #d60400;
+}
+
+MadCap|expandingHead.expandspot
+{
+	color: #008000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+
+MadCap|dropDownHotSpot.dropspot
+{
+	cursor: hand;
+	font-weight: bold;
+	font-style: normal;
+	color: #0000ff;
+	text-decoration: none;
+}
+
+MadCap|expandingBody.expandtext
+{
+	font-style: italic;
+	font-weight: normal;
+	color: #ff0000;
+}
+
+MadCap|glossaryTerm.glossterm
+{
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+
+MadCap|expandingBody.glossterm
+{
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+
